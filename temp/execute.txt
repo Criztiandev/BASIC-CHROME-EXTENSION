@@ -1,0 +1,9 @@
+// Notes before we can start this action script, we need to enable it on the manifest json
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: () => {
+      alert("Greetings");
+    },
+  });
+});
